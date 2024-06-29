@@ -16,8 +16,8 @@ if urgency == "yes":
     case "high":
       print(f"Reminder: '{task_reminder}' is a high priority task that requires immediate attention today!")
     case "medium":
-      print(f"Reminder: '{task_reminder}' is a medium priority task that does not require immediate attention today. Please give attention the task once all high priority tasks have been completed")
+      print(f"Reminder: '{task_reminder}' is a medium priority task that requires immediate attention today!")
     case "low":
-      print(f"Reminder: '{task_reminder}' is a low priority task that requires attention only when high and medium priority tasks that are time-bound have been completed")
+      print(f"Reminder: '{task_reminder}' is a low priority task that requires immediate attention today!")
 else:
   print(f"Note: '{task_reminder}' is a low priority task. Consider completing it when you have free time.")
