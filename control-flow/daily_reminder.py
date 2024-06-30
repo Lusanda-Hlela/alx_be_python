@@ -25,5 +25,5 @@ match priority:
     reminder += time_bound if time_bound else " that you should complete when possible."
     print(f"Reminder: {reminder}")
   case "low":
-    reminder += time_bound if time_bound else " that you should completing when you have free time."
+    reminder += time_bound if time_bound else ". Consider completing it when you have free time."
     print(f"Note: {reminder}")
