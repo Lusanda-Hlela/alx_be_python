@@ -18,12 +18,12 @@ match priority:
       reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
   case "medium":
     if time_bound == "yes":
-      reminder = reminder + " that you should try to complete today."
+      reminder = reminder + " that requires immediate attention today!"
     else:
       reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
   case "low":
     if time_bound == "yes":
-      reminder = reminder + " that you should try to complete today."
+      reminder = reminder + " that requires immediate attention today!"
     else:
       reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
 
