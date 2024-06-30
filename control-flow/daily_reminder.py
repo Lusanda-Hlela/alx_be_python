@@ -6,7 +6,7 @@ priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Initialize the reminder variable
-reminder = f"Reminder: '{task}' is a {priority} priority task"
+reminder = f"'{task}' is a {priority} priority task"
 
 # Process the task based on priority and time sensitivity
 match priority:
@@ -27,8 +27,7 @@ match priority:
             reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
 
 # Provide a Customized Reminder
-print(reminder)
-
-# Main block to execute the script
-if __name__ == "__main__":
-    pass  # Since the script executes directly, nothing else is needed here
+if priority == "low" and time_bound != "yes":
+  print(reminder)
+else:
+  print(f"Reminder: {reminder}")
