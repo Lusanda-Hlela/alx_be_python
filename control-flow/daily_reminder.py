@@ -4,31 +4,26 @@
 task_reminder = input("Enter your task: ")
 
 # Process the Task Based on Priority and Time Sensitivity:
-priority = input("Priority (high/medium/low): ")
+priority = input("Priority (high/medium/low): ").lower()
 
-urgency = input("Is it time-bound? (yes/no): ")
+urgency = input("Is it time-bound? (yes/no): ").lower()
 
 
 # Provide a Customized Reminder:
+reminder = f"'{task_reminder}' is a {priority} priority task"
+
+if urgency == "yes":
+  time_bound = " that requires immediate attention today!"
+else:
+  time_bound = ""
+
 match priority:
   case "high":
-    reminder = f"Reminder: '{task_reminder}' is a high priority task"
-    if urgency == "yes":
-      reminder += " that requires immediate attention today!"
-    else:
-      reminder += " that can wait until tomorrow!"
+    reminder += time_bound if time_bound else " that you should complete as soon as possible."
   case "medium":
-    reminder = f"Reminder: '{task_reminder}' is a medium priority task"
-    if urgency == "yes":
-      reminder += " that requires some attention today."
-    else:
-      reminder += " that can wait until tomorrow!"
+    reminder += time_bound if time_bound else " that you should complete when possible."
   case "low":
-    reminder = f"Reminder: '{task_reminder}' is a low priority task"
-    if urgency == "yes":
-      reminder += " that must be completed today."
-    else:
-      reminder = f"Note: '{task_reminder}' is a low priority task. Consider completing it when you have free time."
+    reminder += time_bound if time_bound else " that you should completing when you have free time."
 
-# Display the Reminder:
-print(reminder)
+# Customized Reminder
+print(f"Reminder: {reminder}")
