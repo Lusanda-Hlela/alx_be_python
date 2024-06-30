@@ -27,5 +27,3 @@ match priority:
   case "low":
     reminder += time_bound if time_bound else " that you should completing when you have free time."
     print(f"Note: {reminder}")
-
-print(f"Reminder: {reminder}")
