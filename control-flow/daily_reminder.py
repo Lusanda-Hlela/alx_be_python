@@ -1,29 +1,30 @@
 # Personal Daily Reminder
 
-# Prompt for a Single Task:
-task_reminder = input("Enter your task: ")
-
-# Process the Task Based on Priority and Time Sensitivity:
+# Prompt the user for a single task
+task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-urgency = input("Is it time-bound? (yes/no): ").lower()
+# Initialize the reminder variable
+reminder = f"Reminder: '{task}' is a {priority} priority task"
 
-
-# Provide a Customized Reminder:
-reminder = f"'{task_reminder}' is a {priority} priority task"
-
-if urgency == "yes":
-  time_bound = " that requires immediate attention today!"
-else:
-  time_bound = ""
+# Process the task based on priority and time sensitivity
 
 match priority:
   case "high":
-    reminder += time_bound if time_bound else " that you should complete as soon as possible."
-    print(f"Reminder: {reminder}")
+    if time_bound == "yes":
+      reminder = reminder + " that requires immediate attention today!"
+    else:
+      reminder = reminder + " that you need to complete as soon as possible."
   case "medium":
-    reminder += time_bound if time_bound else " that you should complete when possible."
-    print(f"Reminder: {reminder}")
+    if time_bound == "yes":
+      reminder = reminder + " that you should try to complete today."
+    else:
+      reminder = reminder + " that you should try to complete when possible."
   case "low":
-    reminder += time_bound if time_bound else ". Consider completing it when you have free time."
-    print(f"Note: {reminder}")
+    if time_bound == "yes":
+      reminder = reminder + " that you should try to complete today."
+    else:
+      reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
+
+print(reminder)
