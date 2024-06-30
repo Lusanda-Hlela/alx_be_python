@@ -28,3 +28,7 @@ match priority:
       reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
 
 print(reminder)
+
+
+if __name__ == "__main__":
+  pass
