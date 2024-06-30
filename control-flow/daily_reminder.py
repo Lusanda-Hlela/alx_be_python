@@ -15,20 +15,16 @@ match priority:
     if time_bound == "yes":
       reminder = reminder + " that requires immediate attention today!"
     else:
-      reminder = reminder + " that you need to complete as soon as possible."
+      reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
   case "medium":
     if time_bound == "yes":
       reminder = reminder + " that you should try to complete today."
     else:
-      reminder = reminder + " that you should try to complete when possible."
+      reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
   case "low":
     if time_bound == "yes":
       reminder = reminder + " that you should try to complete today."
     else:
-      reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
+      reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
 
 print(reminder)
-
-
-if __name__ == "__main__":
-  pass
