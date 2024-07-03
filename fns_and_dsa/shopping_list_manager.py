@@ -6,10 +6,10 @@ shopping_list = []
 
 def display_menu():
     print("Shopping List Manager")
-    print("1. Add an item")
-    print("2. View the list")
-    print("3. Remove an item")
-    print("4. Exit")
+    print(f"1. Add an item")
+    print(f"2. View the list")
+    print(f"3. Remove an item")
+    print(f"4. Exit")
 
 def main():
   shopping_list = []
