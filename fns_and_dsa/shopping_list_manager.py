@@ -11,28 +11,27 @@ def display_menu():
     print("3. Remove an item")
     print("4. Exit")
 
-
 def main():
   shopping_list = []
   while True:
-      display_menu()
-      choice = input("Enter your choice: ")
-      if choice == "1":
-          item = input("Enter the item: ")
-          shopping_list.append(item)
-          pass
-      elif choice == "2":
-          print(shopping_list)
-          pass
-      elif choice == "3":
-          item = input("Enter the item to remove: ")
-          shopping_list.remove(item)
-          pass
-      elif choice == "4":
-          print("Goodbye!")
-          break
-      else:
-          print("Invalid choice.")
+    display_menu()
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        item = input("Enter the item: ")
+        shopping_list.append(item)
+        pass
+    elif choice == "2":
+        print(shopping_list)
+        pass
+    elif choice == "3":
+        item = input("Enter the item to remove: ")
+        shopping_list.remove(item)
+        pass
+    elif choice == "4":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice.")
 
 if __name__ == "__main__":
-  main()
+    main()
